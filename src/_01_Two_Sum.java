@@ -7,8 +7,6 @@ public class _01_Two_Sum {
             int num=nums[i];
             int remNo=target-num;
             if(map.containsKey(remNo)){
-
-
                 return new int[]{map.get(remNo),i};
             }
             map.put(num,i);
