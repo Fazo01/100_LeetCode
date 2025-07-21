@@ -8,6 +8,10 @@ public class _07_Valid_Anagram {
             count[s.charAt(i)-'a']++;
             count[t.charAt(i)-'a']--;
         }
+        for (int c:count){
+            if (c!=0) return false;
+        }
+        return true;
     }
 
     public static void main(String[] args) {
