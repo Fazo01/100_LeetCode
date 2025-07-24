@@ -12,7 +12,10 @@ public class _10_Maximum_Depth_of_Binary_Tree {
 
     // Recursive DFS function to find max depth
     public static int maxDepth(TreeNode root) {
-
+        if(root==null) return 0;
+        int leftDepth=maxDepth(root.left);
+        int rightDepth=maxDepth(root.right);
+        return Math.max(leftDepth,rightDepth)+1;
     }
 
     public static void main(String[] args) {
