@@ -14,7 +14,14 @@ public class _12_Reverse_Linked_List {
 
     // Method to reverse the linked list (iterative)
     public static ListNode02 reverseList(ListNode02 head) {
-
+        ListNode02 prev=null;
+        ListNode02 current=head;
+        while (current!=null){
+            ListNode02 temp=current.next;
+            current.next=prev;
+            prev=current;
+            current=temp;
+        }
         return prev;
     }
 
