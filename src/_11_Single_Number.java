@@ -1,6 +1,10 @@
 public class _11_Single_Number {
     public static int singleNumber(int[] nums) {
-
+        int result=0;
+        for (int bit:nums){
+            result=result^bit;
+        }
+        return result;
     }
 
     // Main method to test the solution
