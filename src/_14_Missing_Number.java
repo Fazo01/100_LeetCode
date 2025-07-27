@@ -14,7 +14,7 @@ public class _14_Missing_Number {
                 return i;
             }
         }
-        return -1; // This shouldn't happen for valid input
+        return -1;
     }
 
     public static void main(String[] args) {
