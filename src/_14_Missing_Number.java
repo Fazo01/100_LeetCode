@@ -1,20 +1,28 @@
 public class _14_Missing_Number {
-    // Brute force solution
     public int missingNumber(int[] nums) {
-        int n=nums.length;
-        for(int i=0;i<=n;i++){
-            boolean found=false;
-            for(int j=0;j<n;j++){
-                if (nums[j]==i){
-                    found=true;
-                    break;
-                }
-            }
-            if (!found){
-                return i;
-            }
+    // Brute force solution
+//        int n=nums.length;
+//        for(int i=0;i<=n;i++){
+//            boolean found=false;
+//            for(int j=0;j<n;j++){
+//                if (nums[j]==i){
+//                    found=true;
+//                    break;
+//                }
+//            }
+//            if (!found){
+//                return i;
+//            }
+//        }
+//        return -1;
+        //best solution
+        int n=nums.length;// n = 3    {3, 0, 1}
+        int expectedSum=n*(n+1)/2; // 3*(3+1)/2 => 3(4)/2 => 12/2 => 6
+        int actualSum=0;
+        for(int num:nums){//  num={3, 0, 1}
+            actualSum=actualSum+num;// actualSum=0+3 => 3+0 => 3+1 =4
         }
-        return -1;
+        return expectedSum-actualSum;//6-4 = 2 so, answer is too
     }
 
     public static void main(String[] args) {
