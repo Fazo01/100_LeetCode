@@ -15,9 +15,13 @@ class TreeNode03 {
 }
 
 public class _16_Depth_of_Binary_Tree {
+    //brute force
 
     public int maxDepth(TreeNode03 root) {
-
+        if(root==null) return 0;
+        int leftside=maxDepth(root.left);
+        int rightside=maxDepth(root.right);
+        return Math.max(leftside,rightside)+1;
     }
     public static void main(String[] args) {
         // Constructing the binary tree: [3,9,20,null,null,15,7]
